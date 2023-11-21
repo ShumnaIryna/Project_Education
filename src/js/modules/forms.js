@@ -90,7 +90,6 @@ export default class Form {
   }
 
   init() {
-    //this.forms.forEach((item) => {
     this.chechMailInputs();
     this.initMask();
 

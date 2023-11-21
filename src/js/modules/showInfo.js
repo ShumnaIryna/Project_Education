@@ -4,14 +4,17 @@ export default class ShowInfo {
   }
 
   init() {
-    this.btns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const sibling = btn.closest(".module__info-show").nextElementSibling;
+      this.btns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          try {
+            const sibling =
+              btn.closest(".module__info-show").nextElementSibling;
 
-        //when we click the btns a second time, the text is hidden
-        sibling.classList.toggle("msg");
-        sibling.style.marginTop = "20px";
+            //when we click the btns a second time, the text is hidden
+            sibling.classList.toggle("msg");
+            sibling.style.marginTop = "20px";
+          } catch (e) {}
+        });
       });
-    });
   }
 }
